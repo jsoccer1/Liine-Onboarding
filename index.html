@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>(insert title here)</title>
-  <link rel="icon" type="image/svg+xml" href="liinelogo.svg" sizes="any" />
-  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&display=swap" rel="stylesheet">
+  <title>Serene Women’s Diagnostics</title>
+  <link rel="icon" type="image/svg+xml" href="serene-logo.svg" sizes="any" />
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700;800&display=swap" rel="stylesheet">
   <!-- Google Tag Manager -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -17,8 +17,9 @@
   
   <style>
     :root {
-      --indigo-500: #6610f2;
-      --yellow-accent: #ffcc00;
+      --teal: #2f7f7c;
+      --teal-deep: #1c5654;
+      --blush-accent: #f3c4cc;
       --dark-bg: #121212;
       --glass-bg: rgba(255, 255, 255, 0.08);
     }
@@ -42,7 +43,7 @@
     }
 
     header {
-      background: linear-gradient(270deg, #a259ff, #6a11cb, #b084f9);
+      background: linear-gradient(270deg, #3a8c8c, #1c5654, #b5576b);
       background-size: 400% 400%;
       animation: gradientShift 10s ease infinite;
       padding: 1rem 1.5rem;
@@ -54,10 +55,11 @@
     }
 
     .book-button {
+      background-color: rgba(255, 255, 255, 0.15);
       color: white;
       font-weight: 700;
       padding: 0.5rem 1rem;
-      border: none;
+      border: 1px solid rgba(255, 255, 255, 0.5);
       border-radius: 20px;
       cursor: pointer;
       text-decoration: none;
@@ -90,6 +92,34 @@
     .header-subtitle {
       font-size: 1rem;
       color: #e0e0e0;
+    }
+
+    /* Services strip */
+    .services {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+      padding: 2rem 1.5rem;
+    }
+
+    .service-card {
+      background-color: var(--glass-bg);
+      border-top: 3px solid var(--blush-accent);
+      border-radius: 12px;
+      padding: 1.25rem;
+    }
+
+    .service-card h2 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 0.4rem;
+    }
+
+    .service-card p {
+      font-size: 0.95rem;
+      color: #cfcfcf;
+      line-height: 1.5;
     }
 
     .locations {
@@ -149,11 +179,19 @@
     }
 
     .location-phone a {
-      color: var(--yellow-accent);
+      color: var(--blush-accent);
       font-weight: 700;
       font-size: 1.3rem;
       text-decoration: none;
       text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+    }
+
+    .location-hours {
+      margin-top: 0.75rem;
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: #ffffff;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
     }
 
     footer {
@@ -164,11 +202,27 @@
       font-size: 0.9rem;
     }
 
-    iframe {
+    .form-note {
+      margin-bottom: 1.25rem;
+      color: #bbbbbb;
+    }
+
+    footer iframe {
       border: none;
       width: 100%;
       max-width: 100%;
-      height: 300px;
+      min-height: 560px;
+    }
+
+    .copyright {
+      margin-top: 1.5rem;
+      color: #888;
+    }
+
+    @media (max-width: 900px) {
+      .services {
+        grid-template-columns: repeat(2, 1fr);
+      }
     }
 
     @media (max-width: 768px) {
@@ -176,6 +230,15 @@
         flex-direction: column;
         align-items: center;
         text-align: center;
+      }
+
+      .book-button {
+        margin-left: 0;
+        margin-bottom: 1rem;
+      }
+
+      .services {
+        grid-template-columns: 1fr;
       }
 
       .locations {
@@ -186,10 +249,6 @@
       .glass-card {
         margin: 1rem;
       }
-
-      .book-button {
-        margin-bottom: 1rem;
-      }
     }
   </style>
 
@@ -197,12 +256,12 @@
 <body>
   
   <header>
-    <img src="liinelogo.svg" alt="Logo" />
+    <img src="serene-logo.svg" alt="Serene Women’s Diagnostics logo" />
     <div class="header-text">
-      <div class="header-title">Insert cool name</div>
-      <div class="header-subtitle">Lucas and Daniel onboarding project</div>
+      <div class="header-title">Serene Women’s Diagnostics</div>
+      <div class="header-subtitle">Compassionate Breast & Cervical Care, from Screening to Treatment</div>
     </div>
-    <!--<a href="book.html" class="book-button">Book Online</a>-->
+    <a href="#appointment" class="book-button">Request an Appointment</a>
   </header>
 
 
@@ -211,23 +270,55 @@
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N98X64WZ"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
+
+    <section class="services">
+      <div class="service-card">
+        <h2>Breast Cancer Screening</h2>
+        <p>Screening and 3D mammograms for your yearly check.</p>
+      </div>
+      <div class="service-card">
+        <h2>Cervical Cancer Screening</h2>
+        <p>Pap and HPV testing, with clear guidance on when you’re due next.</p>
+      </div>
+      <div class="service-card">
+        <h2>Diagnostics</h2>
+        <p>Diagnostic mammograms, breast ultrasound and MRI, biopsies, and colposcopy.</p>
+      </div>
+      <div class="service-card">
+        <h2>Treatment</h2>
+        <p>A care plan built with you, coordinated with surgeons and oncology specialists.</p>
+      </div>
+    </section>
+
     <div class="locations">
       <div class="location-card">
-        <img src="wilmington.jpg" alt="Wilmington Office" />
+        <img src="wilmington.svg" alt="Wilmington Office" />
         <div class="location-content">
           <div class="glass-card">
             <div class="location-name">Wilmington Office</div>
-            <div class="location-phone"><a href="tel:9197445670">(919) 744-5670</a></div>
+            <!-- REPLACE with your Wilmington number (both the tel: link and the visible text) -->
+            <div class="location-phone"><a href="tel:7869423671">(786) 942-3671</a></div>
+            <div class="location-hours">
+              Mon–Thu: 8am–4pm<br>
+              Fri–Sat: 8am–12pm<br>
+              Sun: Closed
+            </div>
           </div>
         </div>
       </div>
 
       <div class="location-card">
-        <img src="raleigh.jpg" alt="Raleigh Office" />
+        <img src="raleigh.svg" alt="Raleigh Office" />
         <div class="location-content">
           <div class="glass-card">
             <div class="location-name">Raleigh Office</div>
-            <div class="location-phone"><a href="tel:2108655415">(210) 865-5415</a></div>
+            <!-- REPLACE with your Raleigh number (both the tel: link and the visible text) -->
+            <div class="location-phone"><a href="tel:7869423670">(786) 942-3670</a></div>
+            <div class="location-hours">
+              Mon–Thu: 7am–4pm<br>
+              Fri: 9am–12pm<br>
+              Sat–Sun: Closed
+            </div>
           </div>
         </div>
       </div>
@@ -237,21 +328,40 @@
         <div class="location-content">
           <div class="glass-card">
             <div class="location-name">Charlotte Office</div>
-            <div class="location-phone"><a href="tel:9194550652">(919) 455-0652</a></div>
+            <!-- REPLACE with your Charlotte number (both the tel: link and the visible text) -->
+            <div class="location-phone"><a href="tel:8643212702">(864) 321-2702</a></div>
+            <div class="location-hours">
+              Mon–Fri: 8am–5pm<br>
+              Sat–Sun: Closed
+            </div>
           </div>
         </div>
       </div>
     </div>
   </main>
 
-  <footer>
-    <!-- Put form code below -->
+  <footer id="appointment">
+    <p class="form-note">Choose your preferred office and time, and our team will call to confirm. Please don’t include medical details in this form.</p>
 
+    <!-- Put form code below -->
+<iframe
+  id="JotFormIFrame-263234789013964"
+  title="Appointment Request Form"
+  onload="window.parent.scrollTo(0,0)"
+  allowtransparency="true"
+  allow="geolocation; microphone; camera; fullscreen; payment"
+  src="https://forms.liine.com/263234789013964"
+  frameborder="0"
+  style="min-width:100%; max-width:100%; height:539px; border:none;"
+  scrolling="no">
+</iframe>
+<script src="https://forms.liine.com/s/umd/latest/for-form-embed-handler.js"></script>
+<script>
+  window.jotformEmbedHandler("iframe[id='JotFormIFrame-263234789013964']", "https://forms.liine.com/");
+</script>
     <!-- put jotform code above --> 
-  
-  
-  
-  
+
+    <p class="copyright">© 2026 Serene Women’s Diagnostics. Liine onboarding test practice.</p>
   </footer>
 
 </body>
