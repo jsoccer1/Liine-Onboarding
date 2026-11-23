@@ -3,14 +3,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Colebank and Teague Cosmetic Dermatology</title>
-  <link rel="icon" type="image/svg+xml" href="liinelogo.svg" sizes="any" />
-  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&display=swap" rel="stylesheet">
+  <title>Thank You | Serene Women’s Diagnostics</title>
+  <link rel="icon" type="image/svg+xml" href="serene-logo.svg" sizes="any" />
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <!-- Google Tag Manager (same container as index.html) -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-N98X64WZ');</script>
+  <!-- End Google Tag Manager -->
 
   <style>
     :root {
-      --indigo-500: #6610f2;
-      --yellow-accent: #ffcc00;
+      --teal: #2f7f7c;
+      --teal-deep: #1c5654;
+      --blush-accent: #f3c4cc;
       --dark-bg: #121212;
       --glass-bg: rgba(255, 255, 255, 0.08);
     }
@@ -25,6 +33,9 @@
       background-color: var(--dark-bg);
       color: #f0f0f0;
       font-family: 'Raleway', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
     }
 
     @keyframes gradientShift {
@@ -34,7 +45,7 @@
     }
 
     header {
-      background: linear-gradient(270deg, #a259ff, #6a11cb, #b084f9);
+      background: linear-gradient(270deg, #3a8c8c, #1c5654, #b5576b);
       background-size: 400% 400%;
       animation: gradientShift 10s ease infinite;
       padding: 1rem 1.5rem;
@@ -42,6 +53,7 @@
       align-items: center;
       gap: 1.25rem;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+      flex-wrap: wrap;
     }
 
     header img {
@@ -66,35 +78,112 @@
     }
 
     .thank-you-section {
+      flex: 1;
       display: flex;
-      flex-direction: column;
       align-items: center;
       justify-content: center;
-      height: calc(100vh - 100px);
+      padding: 3rem 1.5rem;
+    }
+
+    .glass-card {
+      background-color: var(--glass-bg);
+      backdrop-filter: blur(10px);
+      border-top: 3px solid var(--blush-accent);
+      border-radius: 20px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+      padding: 2.5rem 2rem;
+      max-width: 640px;
+      width: 100%;
       text-align: center;
-      padding: 2rem;
+    }
+
+    .check {
+      width: 64px;
+      height: 64px;
+      margin: 0 auto 1.25rem;
+      border-radius: 50%;
+      background-color: rgba(243, 196, 204, 0.15);
+      display: grid;
+      place-items: center;
+      color: var(--blush-accent);
+    }
+
+    .check svg {
+      width: 32px;
+      height: 32px;
     }
 
     .thank-you-section h1 {
       font-size: 2rem;
+      font-weight: 800;
+      color: #ffffff;
+      margin-bottom: 0.75rem;
+    }
+
+    .lead {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: #d6d6d6;
+      margin-bottom: 1.75rem;
+    }
+
+    .call-label {
+      font-size: 0.95rem;
+      color: #bbbbbb;
+      margin-bottom: 0.75rem;
+    }
+
+    .phones {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 0.75rem 1.75rem;
       margin-bottom: 2rem;
     }
 
-    .back-button {
-      background-color: var(--yellow-accent);
-      color: #000;
-      font-weight: bold;
-      padding: 0.75rem 1.5rem;
-      border: none;
-      border-radius: 10px;
-      font-size: 1rem;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
+    .phones span {
+      display: block;
+      font-size: 0.9rem;
+      color: #cfcfcf;
+    }
+
+    .phones a {
+      color: var(--blush-accent);
+      font-weight: 700;
+      font-size: 1.15rem;
       text-decoration: none;
     }
 
+    .phones a:hover {
+      text-decoration: underline;
+    }
+
+    .back-button {
+      display: inline-block;
+      background-color: rgba(255, 255, 255, 0.15);
+      color: #ffffff;
+      font-weight: 700;
+      padding: 0.75rem 1.5rem;
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      border-radius: 20px;
+      font-size: 1rem;
+      text-decoration: none;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+      transition: all 0.3s ease;
+    }
+
     .back-button:hover {
-      background-color: #e6b800;
+      transform: scale(1.05);
+      box-shadow: 0 6px 20px rgba(255, 255, 255, 0.2);
+    }
+
+    footer {
+      background-color: #1c1c1c;
+      color: #888;
+      text-align: center;
+      padding: 1.5rem 1rem;
+      font-size: 0.9rem;
     }
 
     @media (max-width: 768px) {
@@ -103,48 +192,47 @@
         align-items: center;
         text-align: center;
       }
+
+      .thank-you-section h1 {
+        font-size: 1.6rem;
+      }
     }
   </style>
-
-  <script type="text/javascript" defer src="https://analytics.liine.com/v1/bootstrapped/0b90b006cce84b3db01601b78272f24f.js"></script>
-  <script src="https://app-widgets.jotform.io/scripts/getUrlReferrer.js" defer></script>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VZCDKRER1C"></script>
-  <!-- Google Tag Manager -->
-  <script>
-    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-WGMJ28VV');
-  </script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-VZCDKRER1C');
-  </script>
 </head>
 <body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N98X64WZ"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
   <header>
-    <img src="liinelogo.svg" alt="Logo" />
+    <img src="serene-logo.svg" alt="Serene Women’s Diagnostics logo" />
     <div class="header-text">
-      <div class="header-title">Colebank and Teague</div>
-      <div class="header-subtitle">Cosmetic Dermatology</div>
+      <div class="header-title">Serene Women’s Diagnostics</div>
+      <div class="header-subtitle">Compassionate breast and cervical care, from screening to treatment</div>
     </div>
   </header>
 
   <main class="thank-you-section">
-    <h1>Thank you for submitting a form.</h1>
-    <a href="index.html" class="back-button">Back to Home</a>
+    <div class="glass-card">
+      <div class="check" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>
+      </div>
+      <h1>Thank you, we’ve received your request.</h1>
+      <p class="lead">A member of our team at your chosen office will call you shortly to confirm your appointment.</p>
+
+      <p class="call-label">Prefer to talk now? Call your nearest office:</p>
+      <ul class="phones">
+        <!-- REPLACE each number to match index.html exactly (tel: link and visible text) -->
+        <li><span>Raleigh</span><a href="tel:7869423670">(786) 942-3670</a></li>
+        <li><span>Charlotte</span><a href="tel:8643212702">(864) 321-2702</a></li>
+        <li><span>Wilmington</span><a href="tel:7869423671">(786) 942-3671</a></li>
+      </ul>
+
+      <a href="index.html" class="back-button">Back to Home</a>
+    </div>
   </main>
 
-  <!-- Google Tag Manager (noscript) -->
-  <noscript>
-    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WGMJ28VV"
-      height="0" width="0" style="display:none;visibility:hidden">
-    </iframe>
-  </noscript>
-  <!-- End Google Tag Manager (noscript) -->
+  <footer>© 2026 Serene Women’s Diagnostics. Liine onboarding test practice.</footer>
 </body>
 </html>
